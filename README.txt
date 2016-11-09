@@ -1,0 +1,1 @@
+Simple boilerplate for a React app with express that uses ES6 syntax.
