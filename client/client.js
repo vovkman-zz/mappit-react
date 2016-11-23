@@ -6,6 +6,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 ReactDOM.render(
-    <div>BoilerPlate</div>,
+    <div>BoilerPlate Test</div>,
     document.getElementById('root')
 );
