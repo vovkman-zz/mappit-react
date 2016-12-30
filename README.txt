@@ -1,1 +1,1 @@
-Simple boilerplate for a React app with express that uses ES6 syntax.
+Simple boilerplate for a React app with NodeJS/express that uses ES6 syntax.
