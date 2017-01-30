@@ -5,7 +5,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import './test.css'
+
 ReactDOM.render(
-    <div>BoilerPlate Test</div>,
+    <div className="root">BoilerPlate Test</div>,
     document.getElementById('root')
 );

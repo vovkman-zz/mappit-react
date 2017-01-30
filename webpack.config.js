@@ -1,4 +1,4 @@
-
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     entry: './client/client.js',
@@ -7,7 +7,7 @@ module.exports = {
         filename: 'bundle.js'
     },
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
@@ -15,7 +15,17 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: "style-loader!css-loader"
+                use: ExtractTextPlugin.extract({
+                    fallbackLoader: "style-loader",
+                    loader: "css-loader?importLoaders=1!postcss-loader"
+                })
+            },
+            {
+                test: /\.pcss$/,
+                use: ExtractTextPlugin.extract({
+                    fallbackLoader: "style-loader",
+                    loader: "postcss-loader"
+                })
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
@@ -26,7 +36,10 @@ module.exports = {
             }
         ]
     },
+    plugins: [
+        new ExtractTextPlugin("bundle.css")
+    ],
     resolve: {
-        extensions: ['', '.js', '.json']
+        extensions: ['.js', '.json']
     }
 };

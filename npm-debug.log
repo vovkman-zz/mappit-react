@@ -1,46 +1,45 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
-1 verbose cli   'C:\\Users\\Liam Vovk\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli [ '/usr/local/Cellar/node/7.4.0/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'run',
-1 verbose cli   'dev' ]
-2 info using npm@3.10.9
-3 info using node@v6.9.1
-4 verbose run-script [ 'predev', 'dev', 'postdev' ]
-5 info lifecycle ReactExpressBoilerplate@1.0.0~predev: ReactExpressBoilerplate@1.0.0
-6 silly lifecycle ReactExpressBoilerplate@1.0.0~predev: no script for predev, continuing
-7 info lifecycle ReactExpressBoilerplate@1.0.0~dev: ReactExpressBoilerplate@1.0.0
-8 verbose lifecycle ReactExpressBoilerplate@1.0.0~dev: unsafe-perm in lifecycle true
-9 verbose lifecycle ReactExpressBoilerplate@1.0.0~dev: PATH: C:\Users\Liam Vovk\AppData\Roaming\npm\node_modules\npm\bin\node-gyp-bin;C:\web-projects\boilerplate\node_modules\.bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\MATLAB\MATLAB Production Server\R2015a\runtime\win64;C:\Program Files\MATLAB\MATLAB Production Server\R2015a\bin;C:\Program Files\MATLAB\MATLAB Production Server\R2015a\polyspace\bin;C:\Program Files (x86)\Heroku\bin;C:\Program Files (x86)\git\cmd;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\PuTTY\;C:\Program Files\OpenVPN\bin;C:\Program Files\nodejs\;C:\Users\Liam Vovk\Anaconda3;C:\Users\Liam Vovk\Anaconda3\Scripts;C:\Users\Liam Vovk\Anaconda3\Library\bin;C:\Users\Liam Vovk\AppData\Local\Programs\Python\Python35-32\Scripts\;C:\Users\Liam Vovk\AppData\Local\Programs\Python\Python35-32\;C:\Program Files (x86)\Nmap;C:\Program Files\Java\jdk1.8.0_91\bin;C:\Program Files\MongoDB\Server\3.2\bin;C:\Program Files (x86)\Vim\vim74;C:\Program Files (x86)\Heroku\bin;C:\Program Files\Maven\apache-maven-3.3.9\bin;C:\Users\Liam Vovk\AppData\Local\Microsoft\WindowsApps;C:\Program Files\R\R-3.3.0\bin;C:\Users\Liam Vovk\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin;C:\Users\Liam Vovk\AppData\Local\Mist\app-0.8.4\nodes\geth\win-x64;C:\Users\Liam Vovk\AppData\Local\Mist\app-0.8.4\nodes\eth\win-x64;C:\Users\Liam Vovk\AppData\Roaming\npm
-10 verbose lifecycle ReactExpressBoilerplate@1.0.0~dev: CWD: C:\web-projects\boilerplate
-11 silly lifecycle ReactExpressBoilerplate@1.0.0~dev: Args: [ '/d /s /c',
-11 silly lifecycle   'concurrent --kill-others "npm run webpack-watch" "npm run express-server"' ]
-12 silly lifecycle ReactExpressBoilerplate@1.0.0~dev: Returned: code: 1  signal: null
-13 info lifecycle ReactExpressBoilerplate@1.0.0~dev: Failed to exec dev script
-14 verbose stack Error: ReactExpressBoilerplate@1.0.0 dev: `concurrent --kill-others "npm run webpack-watch" "npm run express-server"`
+1 verbose cli   'express-server' ]
+2 info using npm@4.0.5
+3 info using node@v7.4.0
+4 verbose run-script [ 'preexpress-server', 'express-server', 'postexpress-server' ]
+5 info lifecycle ReactExpressBoilerplate@1.0.0~preexpress-server: ReactExpressBoilerplate@1.0.0
+6 silly lifecycle ReactExpressBoilerplate@1.0.0~preexpress-server: no script for preexpress-server, continuing
+7 info lifecycle ReactExpressBoilerplate@1.0.0~express-server: ReactExpressBoilerplate@1.0.0
+8 verbose lifecycle ReactExpressBoilerplate@1.0.0~express-server: unsafe-perm in lifecycle true
+9 verbose lifecycle ReactExpressBoilerplate@1.0.0~express-server: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/liamvovk/Documents/web-projects/SimpleReactNodeBoilerplate/node_modules/.bin:/Users/liamvovk/Documents/web-projects/SimpleReactNodeBoilerplate/node_modules/.bin:/Users/liamvovk/.config/yarn/link/node_modules/.bin:/Users/liamvovk/Documents/web-projects/SimpleReactNodeBoilerplate/node_modules/.bin:/Users/liamvovk/.config/yarn/link/node_modules/.bin:/usr/local/Cellar/yarn/0.19.1/libexec/lib/node_modules/yarn/bin/node-gyp-bin:/Users/liamvovk/.rvm/gems/ruby-2.3.3/bin:/Users/liamvovk/.rvm/gems/ruby-2.3.3@global/bin:/Users/liamvovk/.rvm/rubies/ruby-2.3.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/liamvovk/.rvm/bin
+10 verbose lifecycle ReactExpressBoilerplate@1.0.0~express-server: CWD: /Users/liamvovk/Documents/web-projects/SimpleReactNodeBoilerplate
+11 silly lifecycle ReactExpressBoilerplate@1.0.0~express-server: Args: [ '-c', 'node ./index' ]
+12 silly lifecycle ReactExpressBoilerplate@1.0.0~express-server: Returned: code: 1  signal: null
+13 info lifecycle ReactExpressBoilerplate@1.0.0~express-server: Failed to exec express-server script
+14 verbose stack Error: ReactExpressBoilerplate@1.0.0 express-server: `node ./index`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (C:\Users\Liam Vovk\AppData\Roaming\npm\node_modules\npm\lib\utils\lifecycle.js:255:16)
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:279:16)
 14 verbose stack     at emitTwo (events.js:106:13)
 14 verbose stack     at EventEmitter.emit (events.js:191:7)
-14 verbose stack     at ChildProcess.<anonymous> (C:\Users\Liam Vovk\AppData\Roaming\npm\node_modules\npm\lib\utils\spawn.js:40:14)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
 14 verbose stack     at emitTwo (events.js:106:13)
 14 verbose stack     at ChildProcess.emit (events.js:191:7)
-14 verbose stack     at maybeClose (internal/child_process.js:877:16)
+14 verbose stack     at maybeClose (internal/child_process.js:885:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
 15 verbose pkgid ReactExpressBoilerplate@1.0.0
-16 verbose cwd C:\web-projects\boilerplate
-17 error Windows_NT 10.0.14393
-18 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Users\\Liam Vovk\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "run" "dev"
-19 error node v6.9.1
-20 error npm  v3.10.9
+16 verbose cwd /Users/liamvovk/Documents/web-projects/SimpleReactNodeBoilerplate
+17 error Darwin 16.4.0
+18 error argv "/usr/local/Cellar/node/7.4.0/bin/node" "/usr/local/bin/npm" "run" "express-server"
+19 error node v7.4.0
+20 error npm  v4.0.5
 21 error code ELIFECYCLE
-22 error ReactExpressBoilerplate@1.0.0 dev: `concurrent --kill-others "npm run webpack-watch" "npm run express-server"`
+22 error ReactExpressBoilerplate@1.0.0 express-server: `node ./index`
 22 error Exit status 1
-23 error Failed at the ReactExpressBoilerplate@1.0.0 dev script 'concurrent --kill-others "npm run webpack-watch" "npm run express-server"'.
+23 error Failed at the ReactExpressBoilerplate@1.0.0 express-server script 'node ./index'.
 23 error Make sure you have the latest version of node.js and npm installed.
 23 error If you do, this is most likely a problem with the ReactExpressBoilerplate package,
 23 error not with npm itself.
 23 error Tell the author that this fails on your system:
-23 error     concurrent --kill-others "npm run webpack-watch" "npm run express-server"
+23 error     node ./index
 23 error You can get information on how to open an issue for this project with:
 23 error     npm bugs ReactExpressBoilerplate
 23 error Or if that isn't available, you can get their info via:
