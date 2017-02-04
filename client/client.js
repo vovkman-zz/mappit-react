@@ -5,7 +5,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import MapContainer from './components/map-container'
+
 ReactDOM.render(
-    <div className="root">BoilerPlate Test</div>,
+    <MapContainer/>,
     document.getElementById('root')
 );
