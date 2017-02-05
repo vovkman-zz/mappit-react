@@ -9,6 +9,6 @@ import MapContainer from './components/map-container'
 import './css/w3.css'
 
 ReactDOM.render(
-    <MapContainer/>,
+        <MapContainer/>,
     document.getElementById('mappit-unique-root')
 );
