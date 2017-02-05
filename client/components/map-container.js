@@ -21,7 +21,7 @@ export default class MapContainer extends Component {
             style: {
                 position: 'absolute',
                 width: 500,
-                height: 500,
+                height: 350,
                 top: 0,
                 left: 0
             },
@@ -35,7 +35,6 @@ export default class MapContainer extends Component {
         };
         this.deletePopUp = this.deletePopUp.bind(this);
         this.getPlaceData = this.getPlaceData.bind(this);
-        this.initMap = this.initMap.bind(this);
         this.scrollPopUpLocation = this.scrollPopUpLocation.bind(this);
         this.setDragStyle = this.setDragStyle.bind(this);
         this.setMouseLocation = this.setMouseLocation.bind(this);
@@ -63,37 +62,6 @@ export default class MapContainer extends Component {
             placeId: place.place_id
         };
     }
-    initMap () {
-        var map = new google.maps.Map(document.getElementById('map-wrapper'), {
-            zoom: 17,
-            center: {lat: -33.8666, lng: 151.1958}
-        });
-
-        var marker = new google.maps.Marker({
-            map: map,
-            // Define the place with a location, and a query string.
-            place: {
-                location: {lat: -33.8666, lng: 151.1958},
-                query: 'Google, Sydney, Australia'
-
-            },
-            // Attributions help users find your site again.
-            attribution: {
-                source: 'Google Maps JavaScript API',
-                webUrl: 'https://developers.google.com/maps/'
-            }
-        });
-
-        // Construct a new InfoWindow.
-        var infoWindow = new google.maps.InfoWindow({
-            content: 'Google Sydney'
-        });
-
-        // Opens the InfoWindow when marker is clicked.
-        marker.addListener('click', function() {
-            infoWindow.open(map, marker);
-        });
-    }
     setDragStyle (event) {
         var mapBar = document.createElement('span');
         mapBar.style.opacity = 0;
@@ -111,7 +79,7 @@ export default class MapContainer extends Component {
                     style: {
                         position: 'absolute',
                         width: 500,
-                        height: 500,
+                        height: 350,
                         top: boundingLocation.top + window.pageYOffset,
                         left: boundingLocation.left
                     }
@@ -120,13 +88,14 @@ export default class MapContainer extends Component {
         }
     }
     setPopUpLocation (event) {
-        var mapBoxDims = document.getElementsByClassName('map-bar')[0].getBoundingClientRect();
+        var mapBoxDims = document.getElementsByClassName('map-wrapper')[0].getBoundingClientRect();
         if (event.type == 'dragstart') {
-            if (event.pageX != 0) {
+            if (event.pageX != 0 || event.pageY != 0) {
                 this.setState({dragStart: event.pageX, dragBarStart: mapBoxDims.left, type: 'drag'})
             }
         } else {
-            if (event.pageX != 0) {
+            if (event.pageX != 0 || event.pageY != 0) {
+                console.log(event.pageY);
                 var mapClientX = (event.pageX - this.state.dragStart) >= 0 ?
                     (this.state.dragBarStart + event.pageX - this.state.dragStart) :
                     (this.state.dragBarStart - (this.state.dragStart - event.pageX));
@@ -134,9 +103,8 @@ export default class MapContainer extends Component {
                 this.setState({
                     style: {
                         position: 'absolute',
-                        zIndex: 20,
                         width: 500,
-                        height: 500,
+                        height: 350,
                         left: mapClientX,
                         top: mapClientY
                     },
@@ -154,9 +122,8 @@ export default class MapContainer extends Component {
         this.setState({
             style: {
                 position: 'absolute',
-                zIndex: 20,
                 width: 500,
-                height: 500,
+                height: 350,
                 left: mapClientX,
                 top: mapClientY
             }
@@ -184,16 +151,13 @@ export default class MapContainer extends Component {
         marker2['name'] = 'test 2';
         return (
             <div className="map-container container-fluid flex-column" style={this.state.style}>
-                <div id="map-bar"
+                <div className="map-bar"
                      draggable="true"
                      onDragStart={this.setDragStyle}
-                     onDrag={this.setPopUpLocation}
-                     onDragEnd={this.setPopUpLocation}
-                     className="map-bar well well-sm">
+                     onDrag={this.setPopUpLocation}>
                     <span onClick={this.deletePopUp} className="map-close glyphicon glyphicon-remove"/>
                 </div>
                 <div className="map-wrapper container-fluid" id="map-wrapper">
-                    <span onClick={this.deletePopUp} className="map-close glyphicon glyphicon-remove"/>
                 </div>
                 <div className="map-details container-fluid">
                 </div>
@@ -209,3 +173,10 @@ export default class MapContainer extends Component {
     {/*<MapMarker {...marker1['coords']} marker={marker1} />*/}
     {/*<MapMarker {...marker2['coords']} marker={marker2} />*/}
 {/*</GoogleMap>*/}
+{/*<div id="map-bar"*/}
+     {/*draggable="true"*/}
+     {/*onDragStart={this.setDragStyle}*/}
+     {/*onDrag={this.setPopUpLocation}*/}
+     {/*onDragEnd={this.setPopUpLocation}*/}
+     {/*className="map-bar well well-sm">*/}
+{/*</div>*/}

@@ -10847,7 +10847,7 @@ var MapContainer = function (_Component) {
             style: {
                 position: 'absolute',
                 width: 500,
-                height: 500,
+                height: 350,
                 top: 0,
                 left: 0
             },
@@ -10861,7 +10861,6 @@ var MapContainer = function (_Component) {
         };
         _this.deletePopUp = _this.deletePopUp.bind(_this);
         _this.getPlaceData = _this.getPlaceData.bind(_this);
-        _this.initMap = _this.initMap.bind(_this);
         _this.scrollPopUpLocation = _this.scrollPopUpLocation.bind(_this);
         _this.setDragStyle = _this.setDragStyle.bind(_this);
         _this.setMouseLocation = _this.setMouseLocation.bind(_this);
@@ -10896,39 +10895,6 @@ var MapContainer = function (_Component) {
             };
         }
     }, {
-        key: 'initMap',
-        value: function initMap() {
-            var map = new google.maps.Map(document.getElementById('map-wrapper'), {
-                zoom: 17,
-                center: { lat: -33.8666, lng: 151.1958 }
-            });
-
-            var marker = new google.maps.Marker({
-                map: map,
-                // Define the place with a location, and a query string.
-                place: {
-                    location: { lat: -33.8666, lng: 151.1958 },
-                    query: 'Google, Sydney, Australia'
-
-                },
-                // Attributions help users find your site again.
-                attribution: {
-                    source: 'Google Maps JavaScript API',
-                    webUrl: 'https://developers.google.com/maps/'
-                }
-            });
-
-            // Construct a new InfoWindow.
-            var infoWindow = new google.maps.InfoWindow({
-                content: 'Google Sydney'
-            });
-
-            // Opens the InfoWindow when marker is clicked.
-            marker.addListener('click', function () {
-                infoWindow.open(map, marker);
-            });
-        }
-    }, {
         key: 'setDragStyle',
         value: function setDragStyle(event) {
             var mapBar = document.createElement('span');
@@ -10949,7 +10915,7 @@ var MapContainer = function (_Component) {
                         style: {
                             position: 'absolute',
                             width: 500,
-                            height: 500,
+                            height: 350,
                             top: boundingLocation.top + window.pageYOffset,
                             left: boundingLocation.left
                         }
@@ -10960,21 +10926,21 @@ var MapContainer = function (_Component) {
     }, {
         key: 'setPopUpLocation',
         value: function setPopUpLocation(event) {
-            var mapBoxDims = document.getElementsByClassName('map-bar')[0].getBoundingClientRect();
+            var mapBoxDims = document.getElementsByClassName('map-wrapper')[0].getBoundingClientRect();
             if (event.type == 'dragstart') {
-                if (event.pageX != 0) {
+                if (event.pageX != 0 || event.pageY != 0) {
                     this.setState({ dragStart: event.pageX, dragBarStart: mapBoxDims.left, type: 'drag' });
                 }
             } else {
-                if (event.pageX != 0) {
+                if (event.pageX != 0 || event.pageY != 0) {
+                    console.log(event.pageY);
                     var mapClientX = event.pageX - this.state.dragStart >= 0 ? this.state.dragBarStart + event.pageX - this.state.dragStart : this.state.dragBarStart - (this.state.dragStart - event.pageX);
                     var mapClientY = event.pageY;
                     this.setState({
                         style: {
                             position: 'absolute',
-                            zIndex: 20,
                             width: 500,
-                            height: 500,
+                            height: 350,
                             left: mapClientX,
                             top: mapClientY
                         },
@@ -10993,9 +10959,8 @@ var MapContainer = function (_Component) {
             this.setState({
                 style: {
                     position: 'absolute',
-                    zIndex: 20,
                     width: 500,
-                    height: 500,
+                    height: 350,
                     left: mapClientX,
                     top: mapClientY
                 }
@@ -11030,19 +10995,13 @@ var MapContainer = function (_Component) {
                 { className: 'map-container container-fluid flex-column', style: this.state.style },
                 __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(
                     'div',
-                    { id: 'map-bar',
+                    { className: 'map-bar',
                         draggable: 'true',
                         onDragStart: this.setDragStyle,
-                        onDrag: this.setPopUpLocation,
-                        onDragEnd: this.setPopUpLocation,
-                        className: 'map-bar well well-sm' },
+                        onDrag: this.setPopUpLocation },
                     __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('span', { onClick: this.deletePopUp, className: 'map-close glyphicon glyphicon-remove' })
                 ),
-                __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(
-                    'div',
-                    { className: 'map-wrapper container-fluid', id: 'map-wrapper' },
-                    __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('span', { onClick: this.deletePopUp, className: 'map-close glyphicon glyphicon-remove' })
-                ),
+                __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', { className: 'map-wrapper container-fluid', id: 'map-wrapper' }),
                 __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', { className: 'map-details container-fluid' })
             );
         }
@@ -11067,6 +11026,13 @@ MapContainer.defaultProps = {
 {/*<MapMarker {...marker1['coords']} marker={marker1} />*/}
 {/*<MapMarker {...marker2['coords']} marker={marker2} />*/}
 {/*</GoogleMap>*/}
+{/*<div id="map-bar"*/}
+{/*draggable="true"*/}
+{/*onDragStart={this.setDragStyle}*/}
+{/*onDrag={this.setPopUpLocation}*/}
+{/*onDragEnd={this.setPopUpLocation}*/}
+{/*className="map-bar well well-sm">*/}
+{/*</div>*/}
 
 /***/ }),
 /* 134 */
