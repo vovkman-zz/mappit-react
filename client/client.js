@@ -6,8 +6,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import MapContainer from './components/map-container'
+import './css/w3.css'
 
 ReactDOM.render(
     <MapContainer/>,
-    document.getElementById('root')
+    document.getElementById('mappit-unique-root')
 );
