@@ -45,7 +45,6 @@ export default class MapContainer extends Component {
     }
     getPlaceData() {
         var query = window.getSelection().toString();
-        console.log(Object.keys(new google.maps));
         var service = new google.maps.places.PlacesService(null);
         service.textSearch(query, function (results, status) {
             if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -95,7 +94,6 @@ export default class MapContainer extends Component {
             }
         } else {
             if (event.pageX != 0 || event.pageY != 0) {
-                console.log(event.pageY);
                 var mapClientX = (event.pageX - this.state.dragStart) >= 0 ?
                     (this.state.dragBarStart + event.pageX - this.state.dragStart) :
                     (this.state.dragBarStart - (this.state.dragStart - event.pageX));
@@ -155,6 +153,7 @@ export default class MapContainer extends Component {
                      draggable="true"
                      onDragStart={this.setDragStyle}
                      onDrag={this.setPopUpLocation}>
+                    <div className="map-title">mappit</div>
                     <span onClick={this.deletePopUp} className="map-close glyphicon glyphicon-remove"/>
                 </div>
                 <div className="map-wrapper container-fluid" id="map-wrapper">

@@ -10800,26 +10800,23 @@ module.exports = ReactPropTypesSecret;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(83);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__ = __webpack_require__(85);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(87);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__ = __webpack_require__(86);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_google_map_react__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_google_map_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_google_map_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__map_marker__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__css_map_container_css__ = __webpack_require__(179);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__css_map_container_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__css_map_container_css__);
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_google_map_react__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_google_map_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_google_map_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__map_marker__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__css_map_container_css__ = __webpack_require__(179);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__css_map_container_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__css_map_container_css__);
 
 
 
@@ -10836,12 +10833,12 @@ module.exports = ReactPropTypesSecret;
 
 
 var MapContainer = function (_Component) {
-    __WEBPACK_IMPORTED_MODULE_5_babel_runtime_helpers_inherits___default()(MapContainer, _Component);
+    __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(MapContainer, _Component);
 
     function MapContainer(props) {
-        __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_classCallCheck___default()(this, MapContainer);
+        __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default()(this, MapContainer);
 
-        var _this = __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_possibleConstructorReturn___default()(this, (MapContainer.__proto__ || __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_object_get_prototype_of___default()(MapContainer)).call(this, props));
+        var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (MapContainer.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(MapContainer)).call(this, props));
 
         _this.state = {
             style: {
@@ -10868,7 +10865,7 @@ var MapContainer = function (_Component) {
         return _this;
     }
 
-    __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_createClass___default()(MapContainer, [{
+    __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default()(MapContainer, [{
         key: 'deletePopUp',
         value: function deletePopUp() {
             $('div').remove('.mappit-unique-root');
@@ -10877,7 +10874,6 @@ var MapContainer = function (_Component) {
         key: 'getPlaceData',
         value: function getPlaceData() {
             var query = window.getSelection().toString();
-            console.log(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_keys___default()(new google.maps()));
             var service = new google.maps.places.PlacesService(null);
             service.textSearch(query, function (results, status) {
                 if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -10933,7 +10929,6 @@ var MapContainer = function (_Component) {
                 }
             } else {
                 if (event.pageX != 0 || event.pageY != 0) {
-                    console.log(event.pageY);
                     var mapClientX = event.pageX - this.state.dragStart >= 0 ? this.state.dragBarStart + event.pageX - this.state.dragStart : this.state.dragBarStart - (this.state.dragStart - event.pageX);
                     var mapClientY = event.pageY;
                     this.setState({
@@ -10990,25 +10985,30 @@ var MapContainer = function (_Component) {
             marker1['name'] = 'test 1';
             marker2['coords'] = this.props.greatPlaceCoords;
             marker2['name'] = 'test 2';
-            return __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(
+            return __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
                 'div',
                 { className: 'map-container container-fluid flex-column', style: this.state.style },
-                __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(
+                __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
                     'div',
                     { className: 'map-bar',
                         draggable: 'true',
                         onDragStart: this.setDragStyle,
                         onDrag: this.setPopUpLocation },
-                    __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('span', { onClick: this.deletePopUp, className: 'map-close glyphicon glyphicon-remove' })
+                    __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement(
+                        'div',
+                        { className: 'map-title' },
+                        'mappit'
+                    ),
+                    __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement('span', { onClick: this.deletePopUp, className: 'map-close glyphicon glyphicon-remove' })
                 ),
-                __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', { className: 'map-wrapper container-fluid', id: 'map-wrapper' }),
-                __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', { className: 'map-details container-fluid' })
+                __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement('div', { className: 'map-wrapper container-fluid', id: 'map-wrapper' }),
+                __WEBPACK_IMPORTED_MODULE_5_react___default.a.createElement('div', { className: 'map-details container-fluid' })
             );
         }
     }]);
 
     return MapContainer;
-}(__WEBPACK_IMPORTED_MODULE_6_react__["Component"]);
+}(__WEBPACK_IMPORTED_MODULE_5_react__["Component"]);
 
 MapContainer.defaultProps = {
     center: { lat: 59.938043, lng: 30.337157 },
@@ -11137,12 +11137,7 @@ module.exports = { "default": __webpack_require__(142), __esModule: true };
 module.exports = { "default": __webpack_require__(143), __esModule: true };
 
 /***/ }),
-/* 138 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(145), __esModule: true };
-
-/***/ }),
+/* 138 */,
 /* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11188,13 +11183,7 @@ __webpack_require__(169);
 module.exports = __webpack_require__(12).Object.getPrototypeOf;
 
 /***/ }),
-/* 145 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(170);
-module.exports = __webpack_require__(12).Object.keys;
-
-/***/ }),
+/* 145 */,
 /* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11595,20 +11584,7 @@ __webpack_require__(99)('getPrototypeOf', function(){
 });
 
 /***/ }),
-/* 170 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.2.14 Object.keys(O)
-var toObject = __webpack_require__(58)
-  , $keys    = __webpack_require__(33);
-
-__webpack_require__(99)('keys', function(){
-  return function keys(it){
-    return $keys(toObject(it));
-  };
-});
-
-/***/ }),
+/* 170 */,
 /* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
